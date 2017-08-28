@@ -1,15 +1,26 @@
 Many researchers and developers use [the models that the fastText team has pre-trained on Wikipedia for hundreds of languages](https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md).
 
 ### Downloading the models
-To download** pre-trained models for many languages:
 
-    ./wiki.download.sh bg el ka hy ru
+The zipped models are on the order of 1GB to 10GB in size, depending on the size of the Wikipedia of the language, English being the largest.
 
-This downloads the zipped models into the current directory.  To unzip them all:
+To download pre-trained models for many languages into the current directory:
+
+    wget https://raw.githubusercontent.com/SignalN/ftio/master/ftio/wiki/download.sh
+
+    ./download.sh en ru zh es ar fr de it pt tr pl ja ko
+
+If stopped it will not re-start automatically, but if re-started it will continue from where it stopped. 
+
+Once finished, files `wiki.en.zip` ... `wiki.ko.zip` will be in the current directory.
+
+To unzip them all:
 
     unzip \*.zip
 
-The zipped models are on the order of 1GB to 10GB in size.  If stopped it will not re-start automatically, but if re-started it will continue from where it stopped.  If you run out of disk space when unzipping, remove .zip files that are already unzipped.
+If you run out of disk space when unzipping, remove .zip files that are already unzipped.
+
+Once finished, directories `wiki.en/` ... `wiki.ko/` will be in the current directory, and inside each a `.bin` and `.vec`.
 
 
 ### Using the models
