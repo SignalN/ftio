@@ -5,9 +5,8 @@ for (( i=1; i<=$#; i++ )); do
 done
 
 # For example:
-# ./download.sh bg el ka hy ru fa es fr de it pt ar tr pl ko
+# ./wiki.download.sh bg el ka hy ru fa es fr de it pt ar tr pl ko
 
 # If stopped it will not re-start automatically, but if re-started it will continue from where it stopped.
 
 # Remember to check if there is enough disk space - they are about 4GB each.
-
