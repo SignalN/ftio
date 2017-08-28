@@ -11,15 +11,15 @@ This downloads the zipped models into the current directory.  To unzip them all:
 
 The zipped models are on the order of 1GB to 10GB in size.  If stopped it will not re-start automatically, but if re-started it will continue from where it stopped.  If you run out of disk space when unzipping, remove .zip files that are already unzipped.
 
+
 ### Using the models
 
 To use the models with a Python library like salestock/fasttext or Gensim that wraps or implements fastText:
 
     import ftio.wiki.preproc
 
-    line = "This isn't a test!"
-    preprocessed_line = preproc.preproc(line)
-    ...
+    ... = preproc.line("This isn't a test!")
+
 
 ### About the models
 

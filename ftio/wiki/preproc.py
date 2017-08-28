@@ -46,7 +46,7 @@ def __whitespace(s):
 def __digits(s):
     return ''.join(filter(lambda c: not c.isdigit(), s))
 
-def preproc(s):
+def line(s):
     return __digits(__whitespace(__special_chars(s.lower())))
 
 # Example output:
